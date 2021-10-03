@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Login</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script>
+        function login() {
+            let name = document.getElementById("uname").value
+            let pass = document.getElementById("pw").value
+
+            if (name === "telkom" && pass === "123") {
+                document.getElementById("message").innerHTML = 
+                "<div class='alert alert-success'>Login berhasil</div>"
+            } else {
+                document.getElementById("message").innerHTML = 
+                "<div class='alert alert-danger'>Login gagal</div>"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="card col-lg-3 col-md-6 m-2">
+        <div class="card-header bg-primary">
+            <h3 class="text-white">Login Form</h3>
+        </div>
+
+        <div class="card-body">
+            <div id="message"></div>
+            Username
+            <input type="text" class="form-control mb-2" id="uname">
+
+            Password
+            <input type="password" class="form-control mb-2" id="pw">
+        </div>
+
+        <div class="card-footer">
+            <button onclick="login()" class="btn btn-primary btn-block">LOGIN</button>
+        </div>
+    </div>
+</body>
+</html>

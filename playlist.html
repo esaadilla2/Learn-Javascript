@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script>
+        function playButton(currentList) {
+            //currentList a/ parameter yg digunakan u/ menyimpan
+            //audio yg sdg diputar
+
+            let musics = document.getElementsByTagName("audio");
+            for (let index = 0; index < musics.length; index++) {
+                if (musics[index] !== currentList) {
+                    musics[index].pause();
+                    //kalau bukan currentList maka audio akan berhenti
+                }   
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card card-header bg-primary">
+                <h3 class="text-white text-center">Playlist of Mine </h3>
+            </div>
+
+            <div class="card-body">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <!--untuk gambar-->
+                            <div class="col-lg-4 col-md-6 ">
+                                <img src="gambar/Butter_Cover.jpg" width="100" height="100">
+                            </div>
+
+                            <!--untuk judul dan kontrol lagu-->
+                            <div class="col-lg-8 col-md-10">
+                                <h5 class="text-dark">Butter</h5>
+                                <h6 class="text-dark">by BTS</h6>
+
+                                <audio src="lagu/BTS Butter MV.mp3" controls
+                                onplay="playButton(this)"></audio>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <!--untuk gambar-->
+                            <div class="col-lg-4 col-md-6 ">
+                                <img src="gambar/lights.png" width="100" height="100">
+                            </div>
+
+                            <!--untuk judul dan kontrol lagu-->
+                            <div class="col-lg-8 col-md-10">
+                                <h5 class="text-dark">Lights</h5>
+                                <h6 class="text-dark">by BTS</h6>
+
+                                <audio src="lagu/BTS 'Lights' Official MV.mp3" controls 
+                                onplay="playButton(this)"></audio>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <!--untuk gambar-->
+                            <div class="col-lg-4 col-md-6 ">
+                                <img src="gambar/ptd.png" width="100" height="100">
+                            </div>
+
+                            <!--untuk judul dan kontrol lagu-->
+                            <div class="col-lg-8 col-md-10">
+                                <h5 class="text-dark">Permission to Dance</h5>
+                                <h6 class="text-dark">by BTS</h6>
+
+                                <audio src="lagu/BTS Permission to Dance Lyrics.mp3" controls
+                                onplay="playButton(this)"></audio>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item">
+                        <div class="row">
+                            <!--untuk gambar-->
+                            <div class="col-lg-4 col-md-6 ">
+                                <img src="gambar/butter ft megan.jfif" width="100" height="100">
+                            </div>
+
+                            <!--untuk judul dan kontrol lagu-->
+                            <div class="col-lg-8 col-md-10">
+                                <h5 class="text-dark">Butter (ft. Megan Thee Stallion)</h5>
+                                <h6 class="text-dark">by BTS</h6>
+
+                                <audio src="lagu/BTS Butter Visualizer.mp3" controls
+                                onplay="playButton(this)"></audio>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
